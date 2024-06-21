@@ -1,0 +1,604 @@
+
+@charset "UTF-8";
+
+/*================
+PC、スマホ共通スタイル
+=================*/
+html {
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1080px;
+  min-width: 375px;
+  margin: 0 auto;
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", "Meiryo","Arial","sans-serif";
+}
+
+h2 {
+  font-size: 32px;
+  margin-left: 10px;
+}
+
+h2::after {
+  content: url(images/line.png);
+  padding-left: 10px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+/* メインビジュアル */
+  .main-flex {
+    position: relative;
+    height: 470px;
+    width: 100%;
+    background-color: antiquewhite;
+  }
+
+  .main-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    height: 280px;
+    width: 100%;
+    border-bottom-right-radius: 476px;
+    text-align: center;
+    z-index: 11;
+  }
+
+  h1 {
+    color: white;
+    margin-top: 90px;
+  }
+
+  .main-title > p {
+    color: white;
+    font-size: 16px;
+    margin-top: -25px;
+    margin-left: -15px;
+  }
+
+  .main-flex > img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 476px 0 0 0;
+  z-index: 10;
+  }
+
+  /* MISSION */
+  .mission-photo {
+    width: 100%;
+  }
+
+  /* PRODUCT */
+  .product {
+    background-color: #FAFAFA;
+    padding: 15px;
+  }
+
+  .product-contents {
+    position: relative;
+    height: 550px;
+  }
+
+  .product-photo {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+  }
+  
+  .product-explain {
+    position: absolute;
+    top: 280px;
+    background-color: white;
+    box-shadow: 2px 2px 4px grey;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .product-title {
+    color: #2710d5;
+    font-weight: bold;
+  }
+
+  .product-title-jpn {
+    font-size: 24px;
+    margin-top: -10px;
+  }
+
+  .product-explain-p {
+    font-size: 16px;
+    margin-top: -10px;
+  }
+
+  .product-more {
+    margin-top: -40px;
+    margin-left: 15px;
+  }
+
+  /* aboutus */
+
+  .aboutus {
+    padding: 15px;
+  }
+
+  .aboutus-right > img {
+    width: 100%;
+  }
+
+  .culture-num {
+    color: blue;
+    font-size: 80px;
+  }
+
+  .culture-en {
+    color: #2710d5;
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+  }
+
+  .culture-description {
+    margin-top: -10px;
+  }
+
+  .aboutus-photo2 > img {
+    width: 100%;
+  }
+
+  /* vision */
+  .vision {
+    padding: 15px;
+  }
+
+  .vision-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+
+  .visionitem-photo {
+    position: absolute;
+    top: 0;
+    z-index: 30;
+  }
+
+  .visionitem-explain {
+    position: absolute;
+    top: 50px;
+    z-index: 31;
+    width: 280px;
+    height: 250px;
+  }
+
+  .visionitem-title {
+    color: #2710d5;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .visionitem-jpn {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -15px;
+  }
+
+  .visionitem-p {
+    font-size: 16px;
+    margin-top: -10px;
+  }
+
+  /* COMPANY */
+  .company {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .company-table {
+    background-color: aliceblue;
+    padding:15px;
+  }
+  
+  .company-th {
+    width: 65px;
+    padding: 15px 15px 15px 0;
+    text-align: left;
+    border-top: 1px solid blue;
+  }
+
+  .company-th-bottom {
+    width: 65px;
+    padding: 15px 15px 15px 0;
+    text-align: left;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+  }
+
+  .company-td {
+    background-color: bisque;
+    padding-left: 20px;
+  }
+
+  /* Google Mapを囲う要素 */
+  .map {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 75%; /* 比率を4:3に固定 */
+  }
+
+  /* Google Mapのiframe */
+  .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* お問い合わせ */
+  #contact {
+    margin: 80px auto 80px auto;
+}
+
+/* 外枠 */
+#contact > form > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+/* 左列　見出し */
+.contact-heading {
+    width: 240px;
+    align-self: center;
+}
+/* 見出しのラベル */
+.contact-label {
+    font-weight: bold;
+}
+/* 必須 */
+.contact-span {
+    color: #ce2222;
+    margin: 0 0 0 20px;
+    font-weight: bold;
+}
+/* テキストボックス */
+.contact-textbox {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom-width: 1px;
+    border-bottom-color: #707070;
+    border-style: solid;
+    background-color: #fafafa;
+    height: 56px;
+    width: 400px;
+}
+
+/* お問い合わせ内容のテキストエリア */
+.contact-textarea {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom-width: 1px;
+    border-bottom-color: #707070;
+    background-color: #fafafa;
+    width: 400px;
+    height: 200px;
+}
+
+/* 個人情報の取り扱い */
+details {
+    width: 400px;
+}
+details > div {
+    background-color: #fafafa;
+    padding: 20px;
+}
+
+details > div > span {
+    font-weight: bold;
+}
+
+/* フッター */
+footer {
+  background-color: black;
+  display: block;
+  
+}
+
+.footer-link {
+  flex-direction: column;
+  display: block;
+}
+
+.footer-link > a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* 画面幅が768px以上のとき */
+@media screen and (min-width: 768px) {
+  /* PC用のスタイルを指定する */
+
+  /* ヘッダー */
+  .header-innner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-pc > a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    padding-left: 20px;
+  }
+  
+  /* ナビゲーションのリンクの装飾設定 */
+  
+  .nav-pc > a:link {
+    color: black;
+  }
+  .nav-pc > a:visited {
+    color: black;
+  }
+  .nav-pc > a:hover {
+    color: black;
+    text-decoration: underline;
+    /* マウスカーソル重なった時だけ下線を表示する */
+  }
+  .nav-pc > a:active {
+    color: black;
+  }
+
+/* メインビジュアル */
+.main-flex {
+  max-width: 1080px;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: flex;
+}
+
+.main-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2710d5;
+  color: white;
+  max-width: 620px;
+  height: 400px;
+  width: 100%;
+  border-bottom-right-radius:400px;
+  z-index: 11;
+}
+
+.main-title > h1 {
+  font-size: 60px;
+  margin: 100px 0 0 50px;
+}
+
+.main-title > p {
+  font-size: 24px;
+  margin-top: -20px;
+  margin-left: 70px;
+}
+
+.main-flex > img {
+  max-width: 620px;
+  position: absolute;
+  right: 0;
+  border-top-left-radius:400px;
+  z-index: 10;
+}
+
+/* MISSION */
+.mission-flex {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+}
+
+.mission-left {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.mission-right {
+  width: 50%;
+  padding: 0 20px;
+  margin-top: 40px;
+}
+
+.mission-photo {
+  width: 100%;
+}
+
+.mission-title {
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: aquamarine;
+  margin-bottom: 20px;
+}
+
+.mission-p {
+  margin-bottom: 20px;
+  background-color: antiquewhite;
+}
+
+  /* PRODUCT */
+.product {
+  padding: 15px;
+}
+
+.product-flex {
+  display: flex;
+}
+
+.product {
+  background-color: #FAFAFA;
+}
+
+.product-contents {
+  margin-bottom: 40px;
+}
+
+.product-photo {
+  width: 90%;
+  margin-left: 15px;
+}
+
+.product-explain {
+  background-color: white;
+  box-shadow: 2px 2px 4px grey;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.product-title {
+  color: #2710d5;
+  font-weight: bold;
+}
+
+.product-title-jpn {
+  font-size: 24px;
+  margin-top: -10px;
+}
+
+.product-explain-p {
+  font-size: 16px;
+  margin-top: -10px;
+}
+
+.product-more > img {
+  background-color: aqua;
+}
+
+/* aboutus */
+.aboutus-flex {
+  display: flex;
+}
+
+.culture-num {
+  color: blue;
+  font-size: 80px;
+}
+
+.culture-en {
+  color: #2710d5;
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+}
+
+.culture-description {
+  margin-top: -10px;
+}
+
+.culture-jp {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.aboutus-left {
+  order: 1;
+}
+
+.culture-pic {
+  order: 2;
+  width: 512px;
+  height: 544px;
+}
+
+.aboutus-photo2 > img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.culture-description{
+  margin-right: 30px;
+}
+
+/* VISION */
+.vision {
+  width: 100%;
+  height: 990px;
+  background-color: pink;
+  
+}
+.vision-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-content:flex-start
+  width: 100%;
+}
+
+.vision-container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+.visionitem-photo {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 30;
+}
+
+.visionitem-explain {
+  position: absolute;
+  top: 50px;
+  z-index: 31;
+  width: 280px;
+  height: 250px;
+}
+
+.visionitem-title {
+  color: #2710d5;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.visionitem-title::first-letter {
+  font-size: 36px;
+}
+
+.visionitem-jpn {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -15px;
+}
+
+.visionitem-p {
+  font-size: 16px;
+  margin-top: -10px;
+}
+
+
+
+
+}
+
+
+
